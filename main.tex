@@ -1,0 +1,111 @@
+% @me reminder: overleaf comments
+% ragged2e
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{black}
+\nopagenumbers{}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+\usepackage[scale=0.915]{geometry}
+\usepackage{import}
+\usepackage{multicol}
+\usepackage{import}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\name{Konstantin}{Sewina}
+\newcommand*{\customcventry}[7][.13em]{
+\begin{tabular}{@{}l}
+{\bfseries #4} \
+{\itshape #3}
+\end{tabular}
+\hfill
+\begin{tabular}{l@{}}
+{\bfseries #5} \
+{\itshape #2}
+\end{tabular}
+\ifx&#7&%
+\else{\
+\begin{minipage}{\maincolumnwidth}%
+\small#7%
+\end{minipage}}\fi%
+\par\addvspace{#1}}
+\begin{document}
+\makecvtitle
+\vspace*{-16mm}
+\begin{center}\textbf{ Site Reliability Engineer}\end{center}
+\begin{center}
+\begin{tabular}{ c c c }
+\faEnvelope\enspace konstantin.sewina(at)gmail.com & \faHome\enspace Hof, DE \\
+\faLinkedin\enspace \color{blue} \href{https://www.linkedin.com/in/konstantin-sewina-319553259/}{in/konstantin-sewina} &
+\faGithub\enspace \color{blue} \href{https://github.com/ksewina}{github.com/ksewina}
+\end{tabular}
+\end{center}
+
+\section{Profile}
+{Certified Kubernetes Administrator with 4+ years of experience in the infrastructure side of migrating and developing container-based applications. Skilled in creating and optimizing Kubernetes-based environments, adhering to GitOps best practices with a strong emphasis on reproducibility. Known for innovative problem-solving abilities and consistently seeking out new ideas to improve system efficiency and reliability. Adept at leveraging cutting-edge cloud technologies to deliver robust and scalable solutions. Since this question will come up anyway, I took a long sabatical in 2024 and it was \textbf{awesome}, now I can focus on work again.}
+
+\section{Professional Experience}
+\customcventry{06/2022 ‐ 02/2024}{{\color{blue}\href{https://www.gfk.com}{(GfK SE)}}}{Junior Site Reliability Engineer,}{Nuremberg, BY}{}{
+{\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Collaborated in a mutli-tenant Kubernetes environment following GitOps best practices to improve stability and scaling. Most proud of adopting event-driven autoscaling in a production environment using KEDA to reduce resource waste and cost of ML applications.
+\item Migration and development of python, java(gradle) pipelines from Atlassian Bamboo to Gitlab CI.
+\item Prepared and migrated production workloads from Hashicorp Nomad system to Kubernetes.
+\item Developed and implemented a Prometheus metric exporter for a proprietary on-premise S3 system in Golang.
+\item Mentoring of new joiners
+\item Improvements to the Observability stack of Prometheus, Grafana, OpenSearch to have monitoring with actionable alerts.
+\item PoC for domain-wide adoption of the RabbitMQ Operator / Topology Message Operator to streamline operational effort and have LessOps.
+\end{itemize}}}
+
+\customcventry{01/2023 ‐ 05/2023}{{\color{blue}\href{https://www.google.com/}{(HFO Technology GmbH)}}}{IT Operator,}{Hof, BY}{}{
+{\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Implemented promotional activities such as re-targeting campaigns for e-commerce businesses.
+\item Monitored the performance of PPC campaigns through Google Adwords. 
+\item Managed and optimized PPC campaigns, resulting in a 5\% increase in click-through rates
+\end{itemize}}}
+
+\customcventry{03/2023 ‐ 12/2023}{{\color{blue}\href{https://www.google.com/}{(HFO Telecom GmbH)}}}{2nd Level Technical Support,}{Hof, BY}{}{
+{\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Identified and executed improvements for processes, content, and lead generation.
+\item Collaborated with Content Team to promote blog posts and guest posts.
+\item Implemented new competitive analysis and consumer trend reports to increase quarterly sales by 15%.
+\end{itemize}}}
+
+\customcventry{01/2022 ‐ 07/2022}{{\color{blue}\href{https://www.google.com/}{(HFO Telecom GmbH)}}}{,}{Hof, BY}{}{
+{\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Identified new autoposting solution to cut social media time spent by 35%.
+\item Prepared written text proposals and speech writing drafts.
+\item Managed all public social media profiles of important public figure.
+\end{itemize}}}
+
+\section{Online Courses \& Certifications}
+{\begin{itemize}[label=\textbullet]
+      \item Linux Foundation: Certified Kubernetes Administrator (Sep. 2022) - \underline{\color{blue}\href{https://www.credly.com/badges/4675ad1e-9857-4791-b7b7-3b85797f0ba4/public_url}{Credly}}
+      \item HashiCorp Certified: Terraform Associate (Jan. 2022) - \underline{\color{blue}\href{https://www.pluralsight.com/paths/hashicorp-certified-terraform-associate}{Pluralsight}}
+      \item Cilium Platform Engineer Path (ongoing) - \underline{\color{blue}\href{https://isovalent.com/labs/discovery-platform-engineer/}{Isovalent}}
+        \item various Udemy courses for anything im interesting in (2017 - forever) - \underline{\color{blue}\href{https://www.udemy.com/user/konstantin-sewina/}{Udemy Profile}}
+  \end{itemize}} 
+
+\section{Education}
+\customcventry{2014-2017}{\color{blue}\href{https://www.bsz-eoplauen.de/}{BSZ e.o.plauen}}{IT Specialist - Systems Integration}{Plauen, Saxony}{}{}
+\customcventry{graduated 2014}{\color{blue}\href{https://www.mosengymnasium.de/}{Julius-Mosen-Gynmnasium}}{High School Diploma}{Oelsnitz, Saxony}{}{}
+
+\section{Skills}
+{\begin{itemize}[label=\textbullet]
+\item {\textbf{Cloud Providers:} AWS, GCP, Hetzner}
+\item {\textbf{Scheduling \& Orchestration:} Kubernetes, Docker, KEDA}
+\item {\textbf{Infrastructure \& Services:} FluxCD, Helm, Kustomize, Terraform, RabbitMQ, Postgres}
+\item {\textbf{Observability:} Prometheus, fluentd/fluentbit, Grafana, Loki, OpenSearch, eBPF-based}
+\item {\textbf{General Toolbelt:} Git, Gitlab CI, Linux, bash, vim}
+\item {\textbf{Programming Languages:} Golang}
+\end{itemize}}
+
+\section{Languages}
+\begin{multicols}{2}
+    \begin{itemize}[label=\textbullet]
+    \item \textbf{German} [Native]
+    \item {\textbf{English} [C1]}
+    \item {\textbf{French} [A2]}
+    \end{itemize}
+\end{multicols}
+\end{document}
